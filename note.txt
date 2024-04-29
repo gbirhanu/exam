@@ -1,39 +1,12 @@
- ->navigation(function (NavigationBuilder $builder): NavigationBuilder {
-                return $builder->groups([
-                NavigationItem::make('Dashboard')
-                    ->icon('heroicon-o-home')
-                    ->isActiveWhen(fn (): bool => request()->routeIs('filament.admin.pages.dashboard'))
-                    ->url(fn (): string => Dashboard::getUrl()),
-                    NavigationGroup::make('Competency')
-                        ->items(
-                            array_filter(
-                                Competency::where('department_id', auth()->user()->department_id)
-                                    ->get()
-                                    ->flatMap(function ($competency) {
-                                        return [
-                                            NavigationItem::make($competency->name)
-                                                ->icon('heroicon-o-clipboard-document-list')
-                                                ->url('/resources/competencies/' . $competency->id),
-                                        ];
-                                    })->toArray()
-                            )
-                        ),
-                    NavigationGroup::make('Exams')
-                        ->items(
-                            array_filter(
-                                Exam::whereHas('course', function ($query) {
-                                    $query->where('department_id', auth()->user()->department_id);
-                                })->get()
-                                    ->flatMap(function ($competency) {
-                                        return [
-                                            NavigationItem::make($competency->name)
-                                                ->icon('heroicon-o-clipboard-document-list')
-                                                ->url('/resources/exam-info/' . $competency->id),
-                                        ];
-                                    })->toArray()
-                            )
-                        ),
+hostinger 
+3yAfXMt#PQChRbP
 
+ardiland admin
+Admin@geme1122
 
-                ]);
-            })
+ariland user
+geme@1122  or  hello@123
+
+Sites
+edu.ardiland.com
+nh8xjt
